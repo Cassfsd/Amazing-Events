@@ -1,0 +1,42 @@
+/* Font */
+@import url('https://fonts.google.com/specimen/Roboto+Condensed');
+
+/*  */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.body{
+    display: flex;
+    font-size: 18px;
+    color: rgb(24, 23, 23);
+    line-height: 1;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    }
+
+.brand_logo{
+    width: 300px;
+    height: 100px;
+    margin:5px;
+
+}
+
+.nav_ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-right:15px;
+}
+
+.nav_ul li{
+    margin-top: 10px;
+    padding: 15px;
+}
+a{
+    text-decoration: none;
+
+}
