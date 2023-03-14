@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #F0EEED;
+    color: #332C39;
+}
+
+.body {
+    display: flex;
+    font-size: 18px;
+    line-height: 1;
+    margin-left: 5px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 2px;
+
+}
+
+.check_box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container_events{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+}
+
+.event {
+	
+    width: 340px;
+    height: 400px;
+    filter: blur();
+    align-items: center;
+    border: solid 2px #9da2a2;
+    border-radius: 5px;
+  
+}
+
+.menu_slide{
+    height: 50px;
+    background-color: #609EA2;
+    opacity: 80%;
+}
+
+.fa-solid{
+    color: black;
+}

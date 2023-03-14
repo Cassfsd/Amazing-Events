@@ -3,40 +3,63 @@
 
 /*  */
 * {
-    padding: 0px;
-    margin: 0px;
-}
-.body{
-    display: flex;
-    font-size: 18px;
-    color: rgb(24, 23, 23);
-    line-height: 1;
+    padding: 0;
+    margin: 0;
 }
 
-header{
+header {
     display: flex;
-    justify-content: space-between;
+}
+
+.brandlogo img {
+    display: flex;
+    justify-content: flex-start;
+    width: 25vw;
+    margin: 2px;
+    padding-left: 10px;
+
+
+}
+
+.nav_ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 70vw;
+}
+
+.nav_ul li {
+    justify-content: space-around;
+    padding: 14px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+/*Comienza diseño responsive*/
+@media screen and (min-width: 390px) and (max-width: 767px) {
+    * {
+        margin: 0;
+        padding: 0;
     }
 
-.brand_logo{
-    width: 300px;
-    height: 100px;
-    margin:5px;
+    header {
+        flex-direction: column;
+    }
 
-}
 
-.nav_ul{
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    margin-right:15px;
-}
+    .brandlogo img {
+        width: 35vw;
+    }
 
-.nav_ul li{
-    margin-top: 10px;
-    padding: 15px;
-}
-a{
-    text-decoration: none;
+    .nav_ul {
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+        margin-right: 2px;
+
+    }
 
 }
