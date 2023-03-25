@@ -1,4 +1,4 @@
-{
+var dataAmazing={
   "fechaActual": "2022-01-01",
   "eventos": [
     {

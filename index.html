@@ -1,3 +1,10 @@
+<!-- Por revisar:
+los <> del menu_slide
+el desbordamiento de la tarjeta 7 
+paleta de colores -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,21 +37,22 @@
   </header>
   <main>
     <div class="menu_slide">
-      <a href="./pages/upcomingevents.html" ><i class="fa-solid fa-chevron-left"></i>i class="fa-solid fa-chevron-right"></i>
-    
-      </a>
+      <a class="redirect_pages prev" href="previous-page.html">&lt;</a>
+      <h1 class="menu_slide home">Home</h1>
+      <a class="redirect_pages next" href="next-page.html">&gt;</a>
     </div>
+    
+    <div class="check_box">
+      <input type="checkbox">
+      <input type="checkbox">
+      <input type="checkbox">
+      <input type="checkbox">
+      <input type="checkbox">
+    
 
-    <section class="check_box">
-      <input type="checkbox">
-      <input type="checkbox">
-      <input type="checkbox">
-      <input type="checkbox">
-      <input type="checkbox">
-      <input type="checkbox">
-      <input type="text" placeholder="Buscar" name="buscar">
-    </section>
-
+      <input class="search" type="text" placeholder="Buscar" name="buscar">
+    </div>
+ 
 
 
     <div class="container_events">
@@ -110,6 +118,8 @@
       </div>
     </div>
   </main>
+  <script  src="JS/AmazingEvents.js"></script>
+ <script  src="JS/main.js" ></script>
 </body>
 <footer></footer>
 

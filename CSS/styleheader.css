@@ -14,8 +14,8 @@ header {
 .brandlogo img {
     display: flex;
     justify-content: flex-start;
-    width: 25vw;
-    margin: 2px;
+    width: 15vw;
+   margin-top: 10px;
     padding-left: 10px;
 
 
@@ -24,13 +24,15 @@ header {
 .nav_ul {
     display: flex;
     justify-content: flex-end;
+    padding-left: 120px;
     list-style: none;
     width: 70vw;
 }
 
 .nav_ul li {
-    justify-content: space-around;
-    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
 }
 
 a {
