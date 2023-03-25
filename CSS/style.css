@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    background: #121212;
-    color: #ffffff;
+    background: #ffffff;
+    color: #2d2828;
 }
 
 .body {
@@ -17,94 +17,107 @@ main {
     display: flex;
     flex-direction: column;
     text-align: left;
-    
+
 
 }
+
 .check_box {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-top: 25px;
     margin-left: 50px;
-    gap:100px;
+    gap: 100px;
     margin-bottom: 50px;
-   
+
 }
 
-.search{
+.search {
     display: flex;
     justify-content: flex-end;
     padding-left: 150px;
-    margin-left:450px;
+    margin-left: 450px;
 }
 
-.menu_slide a, h1 {
+.menu_slide a,
+h1 {
     display: flex;
-background-color: rgb(251, 248, 248);
+    background-color: #CD5888;
+    /* opacity:0.2 hacer un sombreado o algo similar  */
     opacity: 80%;
 }
 
-.redirect_pages, .menu_slide h1 {
+.redirect_pages,
+.menu_slide h1 {
     display: flex;
-  justify-content: center;
+    justify-content: center;
 }
-.prev, .next, .home{
-    display:flex;
+
+.prev,
+.next,
+.home {
+    display: flex;
     align-items: center;
-    color:#121212;
+    color: #121212;
 }
 
 
-.search{
-    margin-top:20px;
+.search {
+    margin-top: 20px;
     margin-bottom: 30px;
 }
 
-.container_events{
+.container_events {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 0.5rem;
-    
+
 }
 
 .event {
-	
+
     width: 340px;
     height: 400px;
     align-items: center;
-    border: solid 2px #ecaae2;
+    border: solid 2px #20262E;
     border-radius: 5px;
-    background-color:#121212;
+    background-color: #ffffff;
     text-align: justify;
-    padding: 10px;
+    padding: 5px;
 }
 
-h2{
+h2 {
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-h4{
+h4 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-top: 50px;
-    margin-left: 20px ;
+    margin-left: 20px;
 }
 
 .event a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top:-20px;
+    margin-top: -20px;
     margin-right: 20px;
 }
+
 .event img {
     padding-top: 10px;
-  padding-left: 30px;
+    padding-left: 30px;
 }
 
-.number7{
+button:hover{
+    background-color: #913175;
+    color: #E9E8E8;
+}
+
+.number7 {
     padding-right: 50px;
 }

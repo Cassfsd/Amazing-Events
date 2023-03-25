@@ -35,6 +35,11 @@ header {
     padding: 30px;
 }
 
+.nav_ul a:hover{
+    background-color: #913175;
+    color: #E9E8E8;
+}
+
 a {
     text-decoration: none;
 
