@@ -36,7 +36,7 @@ header {
 }
 
 .nav_ul a:hover{
-    background-color: #913175;
+    background-color: #829460;
     color: #E9E8E8;
 }
 
@@ -46,7 +46,7 @@ a {
 }
 
 /*Comienza diseño responsive*/
-@media screen and (min-width: 390px) and (max-width: 767px) {
+@media screen and (min-width: 390px) and (max-width: 844px) {
     * {
         margin: 0;
         padding: 0;
@@ -61,11 +61,14 @@ a {
         width: 35vw;
     }
 
-    .nav_ul {
+    .nav_ul li {
         display: flex;
         justify-content: flex-start;
         list-style: none;
-        margin-right: 2px;
+        width: 100vw;
+        margin-left: -8px;
+    
+      
 
     }
 
