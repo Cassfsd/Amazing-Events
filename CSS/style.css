@@ -40,48 +40,33 @@ main {
     width: 100vw;
 }
 
-.menu_slide a,
-h1 {
+.menu_slide
+ {
     display: flex;
-    background-color: #512E5E;
-    width: 100vw;
-    /* opacity:0.2 hacer un sombreado o algo similar  */
+    background:linear-gradient( #ad2b68 10%,  #512E5Ec3 90%);  
     opacity: 0.9;
-
-}
-
-.menu_slide.home,
-.menu_slide p {
-    /*usando el . puedo llamar a "las dos clases a la vez"*/
     display: flex;
+    height: 80px;
     justify-content: center;
     align-content: center;
+}/*arreglar este tema con el h1*/
 
-    color: #fff;
-}
+h1, i{
+   padding-top: 12px;
+}    
 
-.redirect_pages,
-.menu_slide h1 {
-    display: flex;
 
-    justify-content: center;
-}
 
-.redirect_pages.preview,
-.redirect_pages.next {
-    display: flex;
-    height: 50px;
-    justify-content: center;
-    align-content: center;
 
-}
 
-.prev,
-.next,
-.home {
-    display: flex;
-    align-items: center;
-    color: #121212;
+.keyboard_arrow_left,
+.keyboard_arrow_right
+ {  display: flex;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-weight: bold;
+    font-size: 50px;
+
 }
 
 
