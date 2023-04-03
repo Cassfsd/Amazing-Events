@@ -1,7 +1,11 @@
 <!-- Por revisar:
-los <> del menu_slide
-el desbordamiento de la tarjeta 7 
-paleta de colores -->
+los <> del menu_slide y las 3 paginas (responsive),
+el desbordamiento de la tarjeta 7,
+terminar responsive;
+terminar contact,
+hacer stats, 
+hacer js 
+
 
 
 
@@ -13,12 +17,10 @@ paleta de colores -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="./CSS/styleheader.css">
+  <!-- <link rel="stylesheet" href="./CSS/styleheader.css"> -->
   <link rel="stylesheet" href="./CSS/style.css">
   <!-- Compiled and minified CSS -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <!-- <link rel="stylesheet" href="https://kit.fontawesome.com/e31eb02af5.css" crossorigin="anonymous"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel="stylesheet" href="https://kit.fontawesome.com/e31eb02af5.css" crossorigin="anonymous"> 
   <link rel="icon" href="./img/favicon.ico.png">
   <title>Amazing Events</title>
 </head>
@@ -42,11 +44,12 @@ paleta de colores -->
     <div class="menu_slide">
       <i><a href="#"  class="keyboard_arrow_left">&lt;</i></a>
     <h1>Home</h1>
-      <i><a href="./pages/upcomingevents.html"  class=" keyboard_arrow_right">&gt;</i></a>
+      <i><a href="./pages/upcomingevents.html"  class="keyboard_arrow_right">&gt;</i></a>
      
     </div>
     
     <div class="check_box">
+      <input type="checkbox">
       <input type="checkbox">
       <input type="checkbox">
       <input type="checkbox">
@@ -114,7 +117,7 @@ paleta de colores -->
       </div>
 
       <div class="event number7">
-        <img src="./img/Cine7.jpg" alt="peliculaAvenger">
+        <img class="event_img7" src="./img/Cine7.jpg" alt="peliculaAvenger">
         <h2>Avengers</h2>
         <p>Premier en 3D de Avengers de Marvel, el inicio de una saga épica con tus mejores superhéroes.</p>
         <h4>Price:250$</h4>
@@ -124,7 +127,13 @@ paleta de colores -->
   </main>
   <script  src="JS/AmazingEvents.js"></script>
  <script  src="JS/main.js" ></script>
+ <footer class="footer_icons">
+  <i class="fa-brands fa-instagram"></i>
+  <i class="fa-brands fa-facebook"></i>
+  <i class="fa-brands fa-whatsapp"></i>
+   <h3 class="footer_text">Cohort</h3>
+ </footer>
+ <script src="https://kit.fontawesome.com/c8c82e2e7c.js" crossorigin="anonymous"></script>
 </body>
-<footer></footer>
 
 </html>

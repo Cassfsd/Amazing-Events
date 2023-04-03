@@ -1,7 +1,91 @@
+/*ACA COMIENZA EL HEADER*/
+/* Font */
+@import url('https://fonts.google.com/specimen/Roboto+Condensed');
+
+/*  */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+}
+
+.brandlogo img {
+    display: flex;
+    justify-content: flex-start;
+    width: 15vw;
+   margin-top: 10px;
+    padding-left: 10px;
+
+
+}
+
+.nav_ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 120px;
+    list-style: none;
+    width: 70vw;
+}
+
+.nav_ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.nav_ul a:hover{
+    background-color: #829460;
+    color: #E9E8E8;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+/*Comienza diseño responsive DE HEADER*/
+@media screen and (min-width: 390px) and (max-width: 844px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+
+    .brandlogo img {
+        width: 35vw;
+    }
+
+    .nav_ul li {
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+        width: 100vw;
+        margin-left: -8px;
+    
+      
+
+    }
+
+}
+/*Aca termina el diseño responsive DE HEADER*/
+/*ACA TERMINA EL HEADER*/
+
+/*----------------*/
+
+
+/*ACA COMIENZA HOME*/
+
 * {
     margin: 0;
     padding: 0;
-    color: #2d2828;
+    color: #2d2828; /*DEJO ESTE NORMALIZE, EL DE ARRIBA O AMBOS???*/
 }
 
 .body {
@@ -9,6 +93,7 @@
     font-size: 18px;
     line-height: 1;
     margin-left: 5px;
+    min-height: 100%;
 }
 
 
@@ -22,22 +107,16 @@ main {
 
 .check_box {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    margin-top: 25px;
-    margin-left: 50px;
     gap: 100px;
-    margin-bottom: 50px;
-    width: 100vw;
+    width: 90vw;
 
 }
 
 .search {
-    display: flex;
-    justify-content: flex-end;
     padding-left: 150px;
     margin-left: 450px;
-    width: 100vw;
 }
 
 .menu_slide
@@ -49,15 +128,16 @@ main {
     height: 80px;
     justify-content: center;
     align-content: center;
+    
+    
 }/*arreglar este tema con el h1*/
 
-h1, i{
-   padding-top: 12px;
+h1, .keyboard_arrow_right,
+.keyboard_arrow_left{
+   padding-top: 15px;
+   color:#E9E8E8;
+   width: 70px;/*Revisar como hacer para que <> quede fijo, no salte al cambiar de pagina y en las paginas past, upcoming y contact us quede en una sola linea */
 }    
-
-
-
-
 
 .keyboard_arrow_left,
 .keyboard_arrow_right
@@ -66,9 +146,11 @@ h1, i{
     padding-right: 200px;
     font-weight: bold;
     font-size: 50px;
-
 }
 
+.slide_text{
+    font-size:
+}
 
 .search {
     margin-top: 20px;
@@ -81,19 +163,19 @@ h1, i{
     justify-content: space-evenly;
     gap: 0.5rem;
 
+
 }
 
 .event {
-
     width: 340px;
     height: 400px;
     align-items: center;
-
     border-radius: 5px;
     filter: blur();
     background-color: rgba(81, 46, 94, 0.60);
     text-align: justify;
     padding: 5px;
+    
 }
 
 h2 {
@@ -131,13 +213,46 @@ button {
 button:hover {
     background-color: #829460;
     color: #E9E8E8;
+    transition: 0.5s smooth ease-in-out; /*Revisar esto */
 }
 
 .number7 {
     padding-right: 50px;
 }
 
-/*ACÁ COMIENZA EL DISEÑO RESPONSIVE*/
+footer{
+    margin-top: 10px;
+    height: 100px;
+    background:#829460;
+    bottom: 0;
+    width: 100vw;
+}
+
+.footer_icons{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 80px;
+    
+    
+}
+.fa-brands{
+    justify-content: flex-start;
+    padding-left: 50px;
+     gap: 50px;
+    font-size: 30px;
+
+}
+
+.footer_text{
+    justify-content: flex-end;
+    padding-left: 950px;
+    font-size: 30px; /*Revisar como hacerlo mejor*/
+   
+}
+
+
+/*ACÁ COMIENZA EL DISEÑO RESPONSIVE DE HOME*/
 @media screen and (min-width: 390px) and (max-width: 844px) {
     * {
         margin: 0;
@@ -165,4 +280,6 @@ button:hover {
    
 
 }
-
+}
+/*ACA TERMINA EL DISEÑO RESPONSIVE DE HOME*/
+/*ACA TERMINA HOME*/

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/styleheader.css">
+    <link rel="stylesheet" href="/CSS/style.css">
     <link rel="icon" href="./img/favicon.ico.png">
     <title>Contact us</title>
 </head>
@@ -13,8 +13,9 @@
 <body>
 
     <header>
-        <!-- revisar lo del figure -->
-        <img class="brand_logo" src="../img/Logo Amazing Events.png" alt="brandlogo">
+        <figure class="brandlogo">
+            <img src="../img/Logo Amazing Events.png" alt="brandlogo">
+        </figure>
         <nav>
             <ul class="nav_ul">
                 <li><a href="../index.html">Home</a></li>
@@ -26,13 +27,28 @@
         </nav>
     </header>
     <main>
+        <div class="menu_slide">
+            <i><a href="./pastevents.html" class="keyboard_arrow_left">&lt;</i></a>
+            <h1>Contact us</h1>
+            <i><a href="/pages/stats.html" class="keyboard_arrow_right">&gt;</i></a>
+        </div>
 
-<section>
-    <input type="text" placeholder="Name" name="name">
-    <input type="text" placeholder="email" name="email">
-    <input type="text" placeholder="Message" name="message">
-    <button value="">Enviar</button>
-</section>
+        <div>
+            <form class="contact_form">
+            <input type="text" placeholder="Name" name="name">
+            <input type="text" placeholder="email" name="email">
+            <input type="text" placeholder="Message" name="message">
+            <submit>Send</submit>
+        </form>
+        </div>
+    </main>
+    <footer class="footer_icons">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+         <h3 class="footer_text">Cohort</h3>
+       </footer>
+    <script src="https://kit.fontawesome.com/c8c82e2e7c.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

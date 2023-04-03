@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    display: flex;
+    font-size: 18px;
+    line-height: 1;
+    margin-left: 5px;
+}
+main{
+    display: flex;
+flex-direction: column;
+}
+
+
+
+.contact_form input{
+    display: flex;
+   background-color: blue;
+
+}

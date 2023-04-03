@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/styleheader.css">
+    <link rel="stylesheet" href="/CSS/style.css">
     <link rel="icon" href="./img/favicon.ico.png">
     <title>Upcoming Events</title>
 </head>
 <body>
     <header>
-        <!-- revisar lo del figure -->
-        <img class="brand_logo" src="../img/Logo Amazing Events.png" alt="brandlogo">
+        <figure class="brandlogo">
+            <img src="../img/Logo Amazing Events.png" alt="brandlogo">
+          </figure>
         <nav>
             <ul class="nav_ul">
                 <li><a href="../index.html">Home</a></li>
@@ -22,64 +23,35 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
+    <main> <!--REvisar si past events debe tener este slider, no era algo de unas estadisticas ahi?-->
+        <div class="menu_slide">
+            <i><a href="../index.html"  class="keyboard_arrow_left">&lt;</i></a>
+          <h1 class="slide_text">Upcoming Events</h1>
+            <i><a href="pastevents.html"  class="keyboard_arrow_right">&gt;</i></a>
+           
+          </div>
+        <div class="check_box">
             <input type="checkbox">
             <input type="checkbox">
             <input type="checkbox">
             <input type="checkbox">
             <input type="checkbox">
             <input type="checkbox">
-            <input type="text" placeholder="Buscar" name="buscar">
-        
-        
-        </section>
+          
+      
+            <input class="search bar" type="text" placeholder="Buscar" name="buscar">
+          </div>
+       
         <div>
-<div >
-    <img src="../img/Concierto de musica1.jpg" alt="proximoconcierto">
-    <h2></h2>
-    <h3></h3>
-    <h4></h4>
-    <button href="../pages/upcomingevent1"></button> <!--revisar y copiar para cada uno -->
-</div>
-<div>
-    <img src="" alt="">
-    <h2></h2>
-    <h3></h3>
-    <h4></h4>
-    <button href="../pages/upcomingevent2.html"></button> <!--revisar y copiar para cada uno -->
-</div>
-<div>
-    <img src="" alt="">
-    <h2></h2>
-    <h3></h3>
-    <h4></h4>
-    <button href="../pages/upcomingevent3.html"></button> <!--revisar y copiar para cada uno -->
-</div>
-<div>
-    <img src="" alt="">
-    <h2></h2>
-    <h3></h3>
-    <h4></h4>
-    <button href="../pages/upcomingevent4.html"></button> <!--revisar y copiar para cada uno -->
-</div>
-<div>
-    <img src="" alt="">
-    <h2></h2>
-    <h3></h3>
-    <h4></h4>
-    <button href="../pages/upcomingevent5.html"></button> <!--revisar y copiar para cada uno -->
-</div>
-<div>
-    <img src="" alt="">
-    <h2></h2>
-    <h3></h3>
-    <h4></h4>
-    <button></button> <!--revisar y copiar para cada uno -->
-</div>
 
-        </div>
+
     </main>
-    <footer></footer>
+    <footer class="footer_icons">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+         <h3 class="footer_text">Cohort</h3>
+       </footer>
+       <script src="https://kit.fontawesome.com/c8c82e2e7c.js" crossorigin="anonymous"></script>
 </body>
 </html>
