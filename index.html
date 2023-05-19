@@ -32,8 +32,8 @@ hacer js -->
     <nav>
       <ul class="nav_ul">
         <li><a class="navevents"  href="#" id="home" >Home</a></li>
-        <li><a class="navevents" id="upcoming"   href="#">Upcoming Events</a></li>
-        <li><a class="navevents" id="past" href="#">Past Events</a></li>
+        <li><a class="navevents slide" id="upcoming"   href="#">Upcoming Events</a></li>
+        <li><a class="navevents slide " id="past" href="#">Past Events</a></li>
         <li><a href="./pages/contactus.html">Contact</a></li>
         <li><a href="./pages/stats.html">Stats</a></li><!--EN JS var buttonNav|| Le quito la clase a contact y stats por explicacion en main.js linea 38-->
       </ul>
@@ -42,29 +42,22 @@ hacer js -->
   <main>
     <div class="menu_slide">
       <i><a href="#" class="keyboard_arrow_left">&lt;</i></a>
-      <h1>Home</h1>
-      <i><a href="./pages/upcomingevents.html" class="keyboard_arrow_right">&gt;</i></a>
+      <h1 id="slidetitle">Home</h1>
+      <i><a href="./pages/upcomingevents.html"  id="arrow_next" class="keyboard_arrow_right">&gt;</i></a>
 
     </div>
+    <div class="searchContainer" id="searchContainer">
+      <div id="checkcategories">
 
-    <div class="check_box">
-      <input type="checkbox">
-      <input type="checkbox">
-      <input type="checkbox">
-      <input type="checkbox">
-      <input type="checkbox">
-      <input type="checkbox">
-
-
-      <input class="search bar" type="text" placeholder="Buscar" name="buscar">
-    </div>
-
+      </div>
+      <input type="text" id="inputSearch" placeholder="Busca tu evento preferido">
+      <i class="fa-solid fa-magnifying-glass lupita"></i>
+  </div>
 
 
     <div class="container_events" id="allevents">
+</div>
 
-     
-    </div>
   </main>
   <!--Primero va el de datos(arriba) y luego el de (abajo), porque si cargo primero logica y no han cargado las variables, me va a decir que no existe la variable. -->
   <footer class="footer_icons">
@@ -74,7 +67,7 @@ hacer js -->
     <h3 class="footer_text">Cohort</h3>
   </footer>
   <script src="JS/AmazingEvents.js"></script>
-  <script src="JS/main.js"></script>
+  <script defer src="JS/main.js"></script>
   <script src="https://kit.fontawesome.com/c8c82e2e7c.js" crossorigin="anonymous"></script>
 </body>
 

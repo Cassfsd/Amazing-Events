@@ -39,6 +39,7 @@ header {
 .nav_ul a:hover{
     background-color: #829460;
     color: #E9E8E8;
+    
 }
 
 a {
@@ -148,8 +149,10 @@ h1, .keyboard_arrow_right,
     font-size: 50px;
 }
 
-.slide_text{
+.naveventsslide { 
     font-size:
+
+
 }
 
 .search {
@@ -216,8 +219,9 @@ button:hover {
     transition: 0.5s smooth ease-in-out; /*Revisar esto */
 }
 
-.number7 {
-    padding-right: 50px;
+p{
+   margin: 20px;
+
 }
 
 footer{
