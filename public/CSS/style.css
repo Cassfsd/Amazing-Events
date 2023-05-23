@@ -115,10 +115,6 @@ main {
 
 }
 
-.search {
-    padding-left: 150px;
-    margin-left: 450px;
-}
 
 .menu_slide
  {
@@ -129,6 +125,7 @@ main {
     height: 80px;
     justify-content: center;
     align-content: center;
+
     
     
 }/*arreglar este tema con el h1*/
@@ -137,7 +134,8 @@ h1, .keyboard_arrow_right,
 .keyboard_arrow_left{
    padding-top: 15px;
    color:#E9E8E8;
-   width: 70px;/*Revisar como hacer para que <> quede fijo, no salte al cambiar de pagina y en las paginas past, upcoming y contact us quede en una sola linea */
+   width: 70px;
+   /*Revisar como hacer para que <> quede fijo, no salte al cambiar de pagina y en las paginas past, upcoming y contact us quede en una sola linea */
 }    
 
 .keyboard_arrow_left,
@@ -149,24 +147,31 @@ h1, .keyboard_arrow_right,
     font-size: 50px;
 }
 
-.naveventsslide { 
-    font-size:
-
-
+#slidetitle{
+   
+    font-size: 30px;
 }
 
-.search {
+#checkcategories{
+  
+}
+
+.searchContainer {
     margin-top: 20px;
     margin-bottom: 30px;
 }
+.search{
+    margin-left: 300px;
+}
 
+.fa-solid.fa-magnifying-glass.lupita{
+    margin-left: 5px;
+}
 .container_events {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 0.5rem;
-
-
 }
 
 .event {
@@ -278,12 +283,7 @@ footer{
        width: 100vw;
     }
 
-.search.bar{
-    /* padding-right: 50px; revisar*/
-    margin:-50px 15px ;
-   
 
-}
 }
 /*ACA TERMINA EL DISEÑO RESPONSIVE DE HOME*/
 /*ACA TERMINA HOME*/

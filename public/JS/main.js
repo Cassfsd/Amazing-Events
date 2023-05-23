@@ -8,10 +8,13 @@ const eventosPasados = [] //Dejo vacio porque cuando recorra le tengo que hacer 
 const eventosFuturos = []
 let checkedCheckboxes = []
 let search = ""
-let ulNombreEventos = document.getElementById("allevents") 
-let arrayAFiltrar =[]
+let ulNombreEventos = document.getElementById("allevents")
+let arrayAFiltrar = []
 var inputSearch = document.getElementById("inputSearch")
 var searchContainer = document.getElementById("searchContainer")
+let formulario = document.getElementById("form")
+let stats = document.getElementById("statsView")
+
 
 
 
@@ -60,6 +63,8 @@ function imprimir(id) {
             inputSearch.value = ""
             searchContainer.style.display = "flex"
             arrayAFiltrar = eventosFuturos
+            stats.style.display = "none"
+            formulario.style.display = "none"
             // console.log("Estoy en upcoming")
             break;
         case "past":
@@ -70,8 +75,64 @@ function imprimir(id) {
             inputSearch.value = ""
             searchContainer.style.display = "flex"
             arrayAFiltrar = eventosPasados
+            stats.style.display = "none"
+            formulario.style.display = "none"
             // console.log("Estoy en past")
             break;
+
+        case "stats":
+            imprimirStats()
+            stats.style.display = "flex"
+            ulNombreEventos.style.display = "none"
+            searchContainer.style.display = "none"
+            formulario.style.display = "none"
+            break;
+
+        case "formContact":
+            ulNombreEventos.style.display = "none"
+            searchContainer.style.display = "none"
+            stats.style.display = "none"
+            formulario.style.display = "flex"
+            formulario.innerHTML =
+                `
+                
+                <form action="">
+                <div class="form_input">
+                    <label for="email"><i class="fa-solid fa-user"></i></label>
+                    <input type="email" name="email" placeholder="email@email.com" required>
+                </div>
+                <div class="form_input">
+                    <label for="type"><i class="fa-solid fa-qrcode"></i></label>
+                    <select id="type" name="type" >
+                        <option value="Varios" selected>Varios</option>
+                        <option value="Reclamo">Reclamo</option>
+                        <option value="Sugerencia">Sugerencia</option>
+                        <option value="Felicitaciones">Felicitaciones</option>
+                    </select>
+                </div>
+                <div class="form_input">
+                    <label for="date"><i class="fa-solid fa-calendar"></i></i></label>
+                    <input type="date"id="date">
+                </div>
+                <div class="form_input">
+                    <label for="comentario"><i class="fa-solid fa-comment"></i></label>
+                    <textarea id="comentario" placeholder="Dejanos tu comentario"></textarea>
+                </div>
+        
+                <div class="boton_form">
+                    <input  class="boton_submit"  type="submit" value="Enviar!!!" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </div>
+            </form>
+            `
+
+
+            let form = document.querySelector("form")
+            form.addEventListener("submit", function (event) { actionForm(event) })
+            //console.log("Ocultar las Cards o Estadisticas y va a mostrar el formulario de contactos")
+
+            break;
+
+
         default:
             display(eventos)
             imprimirCheckbox(eventos)
@@ -80,10 +141,13 @@ function imprimir(id) {
             inputSearch.value = ""
             searchContainer.style.display = "flex"
             arrayAFiltrar = eventos
+            stats.style.display = "none"
+            formulario.style.display = "none"
         // console.log("Estoy en home")
+        break;
     }
 }
-
+imprimir ()
 //FUNCION PARA GENERAR EL TEMPLE LAYOUT(VISTA DINAMICA) //Creo la var afuera porque si la creo dentro del bucle se va a volver a cero, se sigue modificando si está dentro de la función. 
 
 function display(array) {
@@ -157,21 +221,21 @@ function checkboxListener() {
             }
             console.log(checkedCheckboxes)
             console.log(arrayAFiltrar)
-         filtrosCombinados() // Esto me permite mostrar el mensaje de no se encontraron eventos
+            filtrosCombinados() // Esto me permite mostrar el mensaje de no se encontraron eventos
         })
     }
 
 }
 
-inputSearch.addEventListener("keyup", function(evento) {
+inputSearch.addEventListener("keyup", function (evento) {
     var datoInput = evento.target.value;
     search = datoInput.trim().toLowerCase();
-     filtrosCombinados();
-  });
+    filtrosCombinados();
+});
 
 //FILTRAR LOS EVENTOS EN FUNCION DE LAS CATEGORIAS CHECKEADAS 
 function filtrosCombinados() {
-    
+
     var filtrado = []
     if (search !== "" && checkedCheckboxes.length > 0) {
 
@@ -204,14 +268,14 @@ function filtrosCombinados() {
 
 }
 
-let dataFromForm;
-var form = document.querySelector("form")
-form.addEventListener("submit" , (evento)=>{formData(evento) })
+// let dataFromForm;
+// var form = document.querySelector("form")
+// form.addEventListener("submit", (evento) => { formData(evento) })
 
-function formData(evento) {
-    evento.preventDefault()
-    dataFromForm ={
-        
-    }
-    console.log(evento)
-}
+// function formData(evento) {
+//     evento.preventDefault()
+//     dataFromForm = {
+
+//     }
+//     console.log(evento)
+
