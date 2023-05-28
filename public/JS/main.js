@@ -2,10 +2,12 @@ console.log(dataAmazing)
 
 let textSlider = document.getElementById("slidetitle")
 let sliderEventos = document.getElementById("arrow_next")
-const fechaBase = dataAmazing.fechaActual
-const eventos = dataAmazing.eventos
-const eventosPasados = [] //Dejo vacio porque cuando recorra le tengo que hacer un push y si no es un array no puedo hacerle un push.
-const eventosFuturos = []
+// const fechaBase = dataAmazing.fechaActual
+// const eventos = dataAmazing.eventos
+let fechaBase 
+let eventos
+var eventosPasados = [] //Dejo vacio porque cuando recorra le tengo que hacer un push y si no es un array no puedo hacerle un push.
+var eventosFuturos = []
 let checkedCheckboxes = []
 let search = ""
 let ulNombreEventos = document.getElementById("allevents")
@@ -15,7 +17,45 @@ var searchContainer = document.getElementById("searchContainer")
 let formulario = document.getElementById("form")
 let stats = document.getElementById("statsView")
 
+async function getData() {
+    let datosApi
+    await fetch("https://amd-amazingevents-api.onrender.com/api/eventos")
+        .then(response => response.json())
+        .then(json => datosApi = json)
 
+    eventos = datosApi.eventos
+    fechaBase = datosApi.fechaActual
+    console.log(datosApi)
+
+    for (var i = 0; i < eventos.length; i++) {
+        if (eventos[i].date > fechaBase) {
+            eventosFuturos.push(eventos[i]);
+        } else {
+            eventosPasados.push(eventos[i])
+        }
+    }
+
+    //Toma el valor del location.search?TIME  Cuando me devuelvo del detalle
+    var time = location.search.split("?time=")
+    switch (time[1]) {
+        case "past": imprimir("past")
+            changePage(2)
+            break;
+        case "upcoming": imprimir("upcoming")
+            changePage(1)
+            break;
+        case "formContact": imprimir("formContact")
+            changePage(3)
+            break;
+        case "stats": imprimir("stats")
+            changePage(4)
+            break;
+        default: imprimir("home")
+            changePage(0)
+    }
+}
+
+getData()
 
 
 console.log(fechaBase);
@@ -279,3 +319,23 @@ function filtrosCombinados() {
 //     }
 //     console.log(evento)
 
+function displayCard(array) {
+
+    var html = "";
+
+    for (var j = 0; j < array.length; j++) {
+        /*el += quiere decir que le va a ir agregando a medida que recorra un determinado elemento que sera el template string que vamos a componer */
+        html += `
+  <div class="event number1">
+        <img src="./img/${array[i].image}" alt="feriadecomida">
+        <h2>${array[i].name}</h2>  
+        <p>${array[i].description}
+        </p>
+      </div>
+    `
+        //En html yo no puedo representar objetos, por eso acá yo llamo a la clave (image,name, description) y luego al valor (lo que está dentro de la clave.)
+        console.log(html);
+        document.getElementById("cardDetails").innerHTML = html;
+
+    }
+}
