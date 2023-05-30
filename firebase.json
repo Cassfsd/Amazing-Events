@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site":"amazing-events-9c945",
     "public": "public",
     "ignore": [
       "firebase.json",
